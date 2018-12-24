@@ -1,0 +1,42 @@
+@import '~antd/lib/style/themes/default.less';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: auto;
+  background: url('../../assets/home_bg.png') center center @layout-body-background;
+  background-size: cover;
+  .footer {
+    color: #fff;
+  }
+  .loginCon {
+    background-color: #fff;
+    width: 360px;
+    margin: auto;
+    padding: 40px 32px;
+    border-radius: 10px;
+    .loginTitle {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 25px;
+      color: #333;
+    }
+    .submit {
+      margin-top: 25px;
+    }
+    :global {
+      .ant-form-item {
+        margin-bottom: 20px;
+      }
+      .ant-input-group-addon,
+      .ant-input,
+      .ant-btn-lg {
+        border-radius: 2px;
+      }
+      .ant-form-item-with-help {
+        margin-bottom: 1px;
+      }
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "cross-env ENV=dev APP_TYPE=site umi dev",
+    "test": "cross-env ENV=test umi build",
+    "build": "cross-env ENV=pro umi build",
+    "lint-staged": "lint-staged",
+    "lint-staged:js": "eslint --fix --ext .js"
+  },
+  "dependencies": {
+    "antd": "^3.10.4",
+    "axios": "^0.18.0",
+    "dva": "^2.4.0",
+    "enquire-js": "^0.2.1",
+    "memoize-one": "^4.0.0",
+    "lodash": "^4.17.10",
+    "lodash-decorators": "^6.0.0",
+    "moment": "^2.22.2",
+    "path-to-regexp": "^2.4.0",
+    "rc-animate": "^2.4.4",
+    "react": "^16.5.1",
+    "react-container-query": "^0.11.0",
+    "react-copy-to-clipboard": "^5.0.1",
+    "react-document-title": "^2.0.3",
+    "react-dom": "^16.5.1",
+    "react-fittext": "^1.0.0",
+    "react-router-dom": "^4.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^16.4.16",
+    "@types/react-dom": "^16.0.9",
+    "babel-eslint": "^10.0.1",
+    "cross-env": "^5.1.1",
+    "cross-port-killer": "^1.0.1",
+    "eslint": "^5.4.0",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-plugin-babel": "^5.1.0",
+    "eslint-plugin-compat": "^2.6.2",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-markdown": "^1.0.0-beta.6",
+    "eslint-plugin-react": "^7.11.1",
+    "husky": "^1.1.2",
+    "lint-staged": "^7.2.2",
+    "mockjs": "^1.0.1-beta3",
+    "prettier": "1.14.3",
+    "stylelint": "^9.4.0",
+    "stylelint-config-prettier": "^4.0.0",
+    "stylelint-config-standard": "^18.0.0",
+    "tslint": "^5.10.0",
+    "tslint-config-prettier": "^1.10.0",
+    "tslint-react": "^3.6.0",
+    "umi": "^2.2.8",
+    "umi-plugin-react": "^1.2.3"
+  },
+  "optionalDependencies": {
+    "puppeteer": "^1.10.0"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,less}": [
+      "prettier --write",
+      "git add"
+    ],
+    "**/*.{js,jsx}": "npm run lint-staged:js",
+    "**/*.less": "stylelint --syntax less"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 10"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint-staged"
+    }
+  }
+}

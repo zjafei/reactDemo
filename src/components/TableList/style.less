@@ -1,0 +1,27 @@
+.list {
+  position: relative;
+  :global {
+    .ant-table-bordered .ant-table-body > table {
+      border: 0 none transparent;
+    }
+    .ant-table-bordered .ant-table-tbody > tr > td:last-child {
+      border-right: 0 none transparent;
+    }
+    .ant-table-pagination.ant-pagination {
+      margin-right: 16px;
+    }
+    .ant-table.ant-table-empty .ant-table-placeholder,
+    .ant-table-bordered.ant-table-empty .ant-table-placeholder {
+      border: 0 none transparent;
+    }
+  }
+  .header {
+    padding: 12px 12px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  .footer {
+    position: absolute;
+    left: 0;
+    bottom: 22px;
+  }
+}
