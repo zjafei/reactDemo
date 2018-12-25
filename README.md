@@ -31,7 +31,7 @@ npm start
 │   │   │   ├── Demo.js             // 业务页面
 │   │   │   ├── components          // 业务组件
 │   │   │   └── models
-│   │   │       └── demo.js         // 全局模型
+│   │   │       └── demo.js         // 业务模型
 │   │   └── document.ejs            // HTML 模板
 │   ├── services
 │   │   ├── index.js                // api
